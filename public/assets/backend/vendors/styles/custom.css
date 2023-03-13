@@ -1,0 +1,103 @@
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.t-owner {
+    color: #004f88b3;
+}
+
+.t-admin {
+    color: #7725b3;
+}
+
+.error-list-style {
+    list-style-type: disc;
+}
+
+.svg-w {
+    width: 50px;
+    height: 30px;
+}
+
+.admin-badge {
+    background-color: #7725b3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.owner-badge {
+    background-color: #004f88b3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.text-2 {
+    font-size: 15px;
+}
+
+.icon-wrap {
+    display: flex;
+    align-items: baseline;
+}
+
+.h {
+    min-height: 500px;
+}
+
+.shop-action {
+    text-align: center;
+    padding: 20px;
+    background-color: #F0F8FF;
+}
+
+.font-26 {
+    font-size: 26px;
+}
+
+.font_b {
+    font-weight: 500;
+}
+
+.dpy-i {
+    display: inline;
+}
+
+.page-h {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media(max-width: 360px) {
+    .page-h {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.w-info {
+    font-size: 13px;
+    color: red;
+}
+
+.m-tt-46 {
+    margin-top: 46px;
+}
+
+.product-t {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+

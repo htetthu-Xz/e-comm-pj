@@ -1,0 +1,15 @@
+{
+    "name": "htet_thu/e-comm_pj",
+    "autoload": {
+        "psr-4": {
+            "HtetThu\\ECommPj\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "htetthu00",
+            "email": "prohtet20@gmail.com"
+        }
+    ],
+    "require": {}
+}
