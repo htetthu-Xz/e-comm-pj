@@ -60,7 +60,7 @@
 			type="text/css"
 			href="../../assets/backend/vendors/plugins/datatables/css/responsive.bootstrap4.min.css"
 		/>
-		<link rel="stylesheet" type="text/css" href="../../assets/backend/vendors/styles/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../assets/backend/vendors/styles/style.min.css" />
 		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
@@ -96,11 +96,8 @@
 		<!-- End Google Tag Manager -->
 	</head>
 	<body class="d-flex sidebar-shrink">
-		<div class="row">
-			<div class="col-3">
-				<?php include(base_path('views/backend/layout/sidebar.view.php')) ?>
-			</div>
-			<div class="col-9">
+			<div class="main-content">
+			<?php include(base_path('views/backend/layout/sidebar.view.php')) ?>
 				<div class="main-wrap">
 
 					<?php include(base_path('views/backend/layout/nav.view.php')) ?>
