@@ -1,8 +1,11 @@
-		<div class="footer-wrap mt-4 pd-20 mb-20 card-box">
-			&copy; 2023 Torofy.com, All right reserved by
-			<a href="https://github.com/htetthu00" target="_blank"
-				>Htet Thu</a
-			>
+					<div class="footer-wrap mt-4 pd-20 mb-20 card-box">
+						&copy; 2023 Torofy.com, All right reserved by
+						<a href="https://github.com/htetthu00" target="_blank"
+							>Htet Thu</a
+						>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -10,7 +13,7 @@
 		<!-- js -->
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="../../assets/backend/vendors/scripts/core.js"></script>
-		<script src="../../assets/backend/vendors/scripts/script.min.js"></script>
+		<script src="../../assets/backend/vendors/scripts/script.js"></script>
 		<script src="../../assets/backend/vendors/scripts/process.js"></script>
 		<script src="../../assets/backend/vendors/scripts/layout-settings.js"></script>
 		<script src="../../assets/backend/vendors/plugins/apexcharts/apexcharts.min.js"></script>

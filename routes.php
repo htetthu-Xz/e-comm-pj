@@ -25,4 +25,6 @@ $router->patch('/shops/update', 'controllers/backend/shops/update.php');
 
 $router->get('/products', 'controllers/backend/products/index.php');
 $router->get('/products/create', 'controllers/backend/products/create.php');
+$router->post('/products/create', 'controllers/backend/products/store.php');
+$router->delete('/products/delete', 'controllers/backend/products/delete.php');
 

@@ -1,4 +1,4 @@
-<div class="right-sidebar">
+<!-- <div class="right-sidebar">
     <div class="sidebar-title">
         <h3 class="weight-600 font-16 text-blue">
             Layout Settings
@@ -166,9 +166,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="left-side-bar">
+<div class="left-side-bar open">
     <div class="brand-logo">
         <a href="/admin">
             <img 
@@ -185,9 +185,9 @@
             />
             <span style="color:#92999f;">Torofy.com</span>
         </a>
-        <div class="close-sidebar" data-toggle="left-sidebar-close">
+        <!-- <div class="close-sidebar" data-toggle="left-sidebar-close">
             <i class="ion-close-round"></i>
-        </div>
+        </div> -->
     </div>
     <div class="menu-block customscroll">
         <div class="sidebar-menu">

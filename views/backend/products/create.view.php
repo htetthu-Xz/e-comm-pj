@@ -2,11 +2,11 @@
 
 <div class="card rounded-lg shadow-sm">
     <div class="card-header">
-        Add Product
+        Add Products
     </div>
     <div class="card-body">
         <?php if(isset($errors)) : ?>
-            <div class="alert alert-danger">
+            <div class="alert alert-danger error-message">
                  <ul class="error-list-style">
                     <?php foreach($errors as $error) : ?>
                         <li><?= $error ?></li>
@@ -24,7 +24,7 @@
             <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Select Shops</label>
                 <div class="col-sm-12 col-md-10">
-                    <select class="custom-select col-12" name="owner_id">
+                    <select class="custom-select col-12" name="shop_id">
                         <?php foreach($shops as $shop) : ?>
                             <option value="<?= $shop['id'] ?>"><?= $shop['name'] ?></option>
                         <?php endforeach; ?>
@@ -40,13 +40,13 @@
             <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Price</label>
                 <div class="col-sm-12 col-md-10">
-                    <input class="form-control" name="price" type="text" required placeholder="$ or Myanmar Kyats">
+                    <input class="form-control" name="price" type="text" required placeholder="Myanmar Kyats">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Expiry Date</label>
                 <div class="col-sm-12 col-md-10">
-                    <input class="form-control" name="expiry_date" type="date" required>
+                    <input class="form-control" name="expiry_date" type="date">
                 </div>
             </div>
             <div class="form-group row">

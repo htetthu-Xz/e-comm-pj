@@ -127,3 +127,19 @@ function getOwner($userId, $users) {
         }
     }
 }
+
+function getShop($shopId, $shops) {
+    foreach($shops as $shop) {
+        if($shop['id'] === $shopId) {
+            return $shop['name'];
+        }
+    }
+}
+
+// function getShopID($shopId, $shops) {
+//     foreach($shops as $shop) {
+//         if($shop['id'] === $shopId) {
+//             return $shop['id'];
+//         }
+//     }
+// }

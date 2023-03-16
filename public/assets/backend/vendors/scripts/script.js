@@ -129,27 +129,27 @@ jQuery(document).ready(function () {
 	});
 
 	// sidebar menu icon
-	$('.menu-icon, [data-toggle="left-sidebar-close"]').on("click", function () {
-		//$(this).toggleClass('open');
-		$("body").toggleClass("sidebar-shrink");
-		$(".left-side-bar").toggleClass("open");
-		$(".mobile-menu-overlay").toggleClass("show");
-	});
-	$('[data-toggle="header_search"]').on("click", function () {
-		jQuery(".header-search").slideToggle();
-	});
+	// $('.menu-icon, [data-toggle="left-sidebar-close"]').on("click", function () {
+	// 	//$(this).toggleClass('open');
+	// 	$("body").toggleClass("sidebar-shrink");
+	// 	$(".left-side-bar").toggleClass("open");
+	// 	$(".mobile-menu-overlay").toggleClass("show");
+	// });
+	// $('[data-toggle="header_search"]').on("click", function () {
+	// 	jQuery(".header-search").slideToggle();
+	// });
 
-	var w = $(window).width();
-	$(document).on("touchstart click", function (e) {
-		if (
-			$(e.target).parents(".left-side-bar").length == 0 &&
-			!$(e.target).is(".menu-icon, .menu-icon img")
-		) {
-			$(".left-side-bar").removeClass("open");
-			$(".menu-icon").removeClass("open");
-			$(".mobile-menu-overlay").removeClass("show");
-		}
-	});
+	// var w = $(window).width();
+	// $(document).on("touchstart click", function (e) {
+	// 	if (
+	// 		$(e.target).parents(".left-side-bar").length == 0 &&
+	// 		!$(e.target).is(".menu-icon, .menu-icon img")
+	// 	) {
+	// 		$(".left-side-bar").removeClass("open");
+	// 		$(".menu-icon").removeClass("open");
+	// 		$(".mobile-menu-overlay").removeClass("show");
+	// 	}
+	// });
 	// $(window).on("resize", function () {
 	// 	var w = $(window).width();
 	// 	if ($(window).width() > 1200) {
@@ -160,12 +160,12 @@ jQuery(document).ready(function () {
 	// });
 
 	// sidebar menu Active Class
-	$("#accordion-menu").each(function () {
-		var vars = window.location.href.split("/").pop();
-		$(this)
-			.find('a[href="' + vars + '"]')
-			.addClass("active");
-	});
+	// $("#accordion-menu").each(function () {
+	// 	var vars = window.location.href.split("/").pop();
+	// 	$(this)
+	// 		.find('a[href="' + vars + '"]')
+	// 		.addClass("active");
+	// });
 
 	// click to copy icon
 	$(".fa-hover").click(function (event) {

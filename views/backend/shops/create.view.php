@@ -12,7 +12,7 @@
     </div>
     <div class="card-body">
         <?php if(isset($errors)) : ?>
-            <div class="alert alert-danger">
+            <div class="alert alert-danger error-message">
                  <ul class="error-list-style">
                     <?php foreach($errors as $error) : ?>
                         <li><?= $error ?></li>

@@ -95,7 +95,21 @@
 
 		<!-- End Google Tag Manager -->
 	</head>
-	<body>
+	<body class="d-flex sidebar-shrink">
+		<div class="row">
+			<div class="col-3">
+				<?php include(base_path('views/backend/layout/sidebar.view.php')) ?>
+			</div>
+			<div class="col-9">
+				<div class="main-wrap">
+
+					<?php include(base_path('views/backend/layout/nav.view.php')) ?>
+
+					<div class="mobile-menu-overlay"></div>
+
+					<div class="main-container">
+						<div class="pd-ltr-20">
+			
 
 		<!-- <div class="pre-loader">
 			<div class="pre-loader-box">
@@ -109,12 +123,3 @@
 				<div class="loading-text">Loading...</div>
 			</div>
 		</div> -->
-
-        <?php include(base_path('views/backend/layout/nav.view.php')) ?>
-
-        <?php include(base_path('views/backend/layout/sidebar.view.php')) ?>
-
-		<div class="mobile-menu-overlay"></div>
-
-		<div class="main-container">
-			<div class="pd-ltr-20">
