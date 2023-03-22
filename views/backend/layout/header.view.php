@@ -39,7 +39,7 @@
 			rel="stylesheet"
 		/>
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="../../assets/backend/vendors/styles/core.css" />
+		<link rel="stylesheet" type="text/css" href="../../assets/backend/vendors/styles/core.min.css" />
 		<link
 			rel="stylesheet"
 			type="text/css"
@@ -95,10 +95,10 @@
 
 		<!-- End Google Tag Manager -->
 	</head>
-	<body class="d-flex sidebar-shrink">
-			<div class="main-content">
+	<body>
+
 			<?php include(base_path('views/backend/layout/sidebar.view.php')) ?>
-				<div class="main-wrap">
+
 
 					<?php include(base_path('views/backend/layout/nav.view.php')) ?>
 
