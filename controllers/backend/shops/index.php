@@ -10,7 +10,7 @@ if(checkAuthUser()) {
     $shops = $db->query('SELECT * FROM shops')->get();
 
     $users = $db->query('SELECT * FROM users')->get();
-
+    // dd($shops);
     view('backend/shops/index.view.php', compact('shops','users'));
 } else {
     (new Core\Router)->abort(403);

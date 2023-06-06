@@ -37,7 +37,8 @@ if(empty($errors)) {
                 ]);
 
     with('success', 'Shop successfully created.');
-    redirectTo('shops');
+    redirectTo('admin/shops');
 } else {
-    view('backend/shops/create.view.php',['errors' => $errors]);
+    $users = $db->query("SELECT * FROM users WHERE is_admin = '0'")->get();
+    view('backend/shops/create.view.php',['errors' => $errors, 'users' => $users]);
 }

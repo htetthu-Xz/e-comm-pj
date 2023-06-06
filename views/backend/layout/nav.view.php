@@ -1,5 +1,5 @@
-<div class="header">
-    <div class="header-left">
+<div class="dark-h header-dark d-flex justify-content-between">
+    <div class="header-left mt-3">
         <div class="menu-icon bi bi-list"></div>
         <div
             class="search-toggle-icon bi bi-search"
@@ -167,7 +167,7 @@
                     <span class="user-icon">
                         <img src="../../<?= defaultProfile(session('auth_user')) ?>" alt="" />
                     </span>
-                    <span class="user-name"><?= session('auth_user')['name'] ?></span>
+                    <span class="user-name text-white"><?= session('auth_user')['name'] ?></span>
                 </a>
                 <div
                     class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"

@@ -61,7 +61,8 @@
 			href="../../assets/backend/vendors/plugins/datatables/css/responsive.bootstrap4.min.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="../../assets/backend/vendors/styles/style.min.css" />
-		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../assets/backend/vendors/styles/bootstrap-switch-button.min.css" />
+
 
 
 
@@ -96,27 +97,33 @@
 		<!-- End Google Tag Manager -->
 	</head>
 	<body>
-
+		<div class="hid">
 			<?php include(base_path('views/backend/layout/sidebar.view.php')) ?>
 
+			<?php include(base_path('views/backend/layout/nav.view.php')) ?>
+		</div>
 
-					<?php include(base_path('views/backend/layout/nav.view.php')) ?>
+			<div class="mobile-menu-overlay"></div>
 
-					<div class="mobile-menu-overlay"></div>
-
-					<div class="main-container">
-						<div class="pd-ltr-20">
+			<div class="main-container pt-3">
+				<div class="pd-ltr-20">
 			
-
-		<!-- <div class="pre-loader">
-			<div class="pre-loader-box">
-				<div class="loader-logo">
-					<img src="../../assets/backend/vendors/images/deskapp-logo.svg" alt="" />
-				</div>
-				<div class="loader-progress" id="progress_div">
-					<div class="bar" id="bar1"></div>
-				</div>
-				<div class="percent" id="percent1">0%</div>
-				<div class="loading-text">Loading...</div>
-			</div>
-		</div> -->
+					<div class="pre-loader">
+						<div class="pre-loader-box">
+							<div class="loader-logo d-flex">
+								<!-- <img src="../../assets/backend/vendors/images/deskapp-logo.svg" alt="" /> -->
+								<img
+									src="../../assets/backend/vendors/images/logo-icon.png"
+									alt=""
+									class="light-logo"
+									style="width:80px; height:80px; padding:10px"
+								/>
+								<span style="color:#92999f; font-size: 30px; font-weight:700;">Torofy.com</span>
+							</div>
+							<div class="loader-progress" id="progress_div">
+								<div class="bar" id="bar1"></div>
+							</div>
+							<div class="percent" id="percent1">0%</div>
+							<div class="loading-text">Loading...</div>
+						</div>
+					</div>

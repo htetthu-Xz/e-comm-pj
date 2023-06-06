@@ -124,7 +124,7 @@
                                                 type="submit" 
                                             >Sign In</button>
 										</div>
-										<div
+										<!-- <div
 											class="font-16 weight-600 pt-10 pb-10 text-center"
 											data-color="#707373"
 										>
@@ -136,7 +136,7 @@
 												href=""
 												>Register To Create Account</a
 											>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</form>
@@ -147,6 +147,10 @@
 		</div>
 	</div>
 
-
-
 <?php include(base_path('views/backend/layout/footer.view.php')) ?>
+
+<style>
+	.hid {
+		display: none;
+	}
+</style>

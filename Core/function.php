@@ -81,6 +81,20 @@ function checkAuthUser()
     return isset($_SESSION['auth_user']);
 }
 
+function checkAuthCus()
+{
+    return isset($_SESSION['customer']);
+}
+
+function getAuthCus()
+{
+    if(checkAuthCus()){
+        return $_SESSION['customer'];
+    }else {
+        return null;
+    }
+}
+
 function getAuthUser()
 {
     if(checkAuthUser()){
@@ -112,6 +126,14 @@ function defaultProfile($user) {
     }
 }
 
+function defaultCustomerProfile($user) {
+    if($user['profile'] !== '') {
+        return $user['profile'];
+    } else {
+            return 'profile_images/defaultMale.jpg';
+    }
+}
+
 function previousPage() {
 	if( isset( $_SERVER['HTTP_REFERER'] ) ){
 		return $_SERVER['HTTP_REFERER'];
@@ -136,10 +158,95 @@ function getShop($shopId, $shops) {
     }
 }
 
-// function getShopID($shopId, $shops) {
-//     foreach($shops as $shop) {
-//         if($shop['id'] === $shopId) {
-//             return $shop['id'];
-//         }
-//     }
-// }
+function getCategory($category_id, $categories) {
+    foreach($categories as $category) {
+        if($category['id'] === $category_id) {
+            return $category['name'];
+        }
+    }
+}
+
+function upload($imgFile, $path) {
+    if(isset($imgFile['name']) && $imgFile['name'] != ''){
+        $profile_name = $path.\Carbon\Carbon::now()->format('U').str_replace(' ', '_', $imgFile['name']);
+        $profile_tmp = $imgFile['tmp_name'];
+        
+        move_uploaded_file($profile_tmp, $profile_name);
+
+
+        return $profile_name;
+    }
+}
+
+function isActive($value) {
+    if($value == 1) {
+        return 'checked';
+    }
+}
+
+function getImagesFromMultiSelect($files) {
+    $images = [];
+    $count = 0;
+    $key = 0;
+
+    foreach($files as $images_ary) {
+        foreach($images_ary as $image) {
+            $images[$count][$key] = $image;
+            $count++;
+        }
+        $count = 0;
+        $key++;
+    }
+    return $images;
+}
+
+function getCartProductQuantity() {
+    $quantities = array_column($_SESSION['cart'], 'quantity');
+    $total = array_sum($quantities);
+
+    if($total != 0 ) {
+        return $total;
+    } else {
+        return 0;
+    }
+}
+
+function getEachProductTotalPrice($price, $p_id) {
+    return $price * $_SESSION['cart'][$p_id]['quantity'];
+}
+
+function getSubTotal($carts) {
+    $total = 0;
+    foreach($carts as $cart) {
+        foreach($_SESSION['cart'] as $item) {
+            if($cart['id'] == $item['product_id']) {
+                $total += $cart['price'] * $item['quantity'];
+            }
+        }
+    }
+
+    return $total;
+}
+
+function getOrderNumber($val) {
+    if($val === false) {
+        return 'O-100001';
+    } else {
+        $num = intval(substr($val['order_number'], 2)) + 1;
+        return 'O-'.$num;
+    }
+}
+
+function guidv4($data = null) {
+
+    $data = $data ?? random_bytes(16);
+    assert(strlen($data) == 16);
+
+
+    $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
+
+    $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
+
+    return vsprintf('%s%s-%s%s%s', str_split(bin2hex($data), 4));
+}
+

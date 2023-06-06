@@ -2,7 +2,8 @@
     "name": "htet_thu/e-comm_pj",
     "autoload": {
         "psr-4": {
-            "HtetThu\\ECommPj\\": "src/"
+            "HtetThu\\ECommPj\\": "src/",
+            "Core\\" : "Core/"
         }
     },
     "authors": [
@@ -11,5 +12,7 @@
             "email": "prohtet20@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "nesbot/carbon": "^2.66"
+    }
 }

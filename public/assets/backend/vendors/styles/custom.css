@@ -34,6 +34,26 @@
     border-radius: 5px;
 }
 
+.p-count {
+    font-size: 70px;
+    color: #6154d9;
+}
+
+.o-count {
+    font-size: 70px;
+    color: #51d26f;
+}
+
+.s-count {
+    font-size: 70px;
+    color: #44b8ca;
+}
+
+.u-count {
+    font-size: 70px;
+    color: #675ccf;
+}
+
 .owner-badge {
     background-color: #004f88b3;
     color: white;
@@ -49,9 +69,18 @@
     display: flex;
     align-items: baseline;
 }
+.y {
+    color: #7725b3;
+    font-weight: bold;
+}
 
 .h {
     min-height: 500px;
+}
+
+.table td{ 
+    /* width: 100px; */
+    font-weight: bold;
 }
 
 .shop-action {
@@ -103,5 +132,50 @@
     border-radius: 3px;
 }
 
+.dark-h {
+    background-color: #031e23;
+}
 
+.border-imgp {
+    border: 1px solid;
+    vertical-align: middle;
+}
 
+.hm {
+    max-height: 150px;
+}
+
+.info-update-text {
+    color: red;
+    font-size: small;
+    text-align: center;
+}
+
+.sw {
+    width: 200px;
+    height: 110px;
+}
+
+.cancel {
+    padding: 0;
+    top: 0px;
+    right: 0px;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    width: 15px;
+    height: 18px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: red;
+    color: #ffffff;
+}
+
+.t-red {
+    color: rgb(221, 34, 34);
+}

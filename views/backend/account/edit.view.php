@@ -1,7 +1,7 @@
 <?php include(base_path('views/backend/layout/header.view.php')) ?>
 
 <div class="t-right">
-    <a href="/admin/accounts" class="btn btn-dark btn-sm mb-3">
+    <a href="<?= previousPage() ?>" class="btn btn-dark btn-sm mb-3">
         <span class="ri-arrow-drop-left-line"></span> Back
     </a>
 </div>

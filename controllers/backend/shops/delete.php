@@ -15,7 +15,7 @@ if(null !== session('auth_user') && session('auth_user')['is_admin'] == 1){
     $db->query('DELETE FROM shops WHERE id = :id',['id' => $shop['id']]);
 
     with('success', 'Shop successfully Deleted.');
-    redirectTo('shops');
+    redirectTo('admin/shops');
 
 } else {
     $router = new Core\Router;

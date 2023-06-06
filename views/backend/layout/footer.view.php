@@ -7,8 +7,13 @@
 		</div>
 	</div>
 
+
 		<!-- js -->
+		
+		<script src = "https://ajax.aspnetCDN.com/ajax/jQuery/jQuery-3.3.1.min.js"></script>
+		<script src="../../assets/backend/vendors/scripts/jquery-3.6.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="../../assets/backend/vendors/scripts/bootstrap-switch-button.min.js"></script>
 		<script src="../../assets/backend/vendors/scripts/core.min.js"></script>
 		<script src="../../assets/backend/vendors/scripts/script.min.js"></script>
 		<script src="../../assets/backend/vendors/scripts/process.js"></script>

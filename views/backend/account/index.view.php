@@ -1,17 +1,12 @@
-<?php
-
-    unset($_SESSION['success'])
-
-?>
 <?php include(base_path('views/backend/layout/header.view.php')) ?>
     <div class="t-right">
         <a href="/admin/accounts/create" class="btn btn-primary btn-lg mb-3">
             <span class="ri-add-line"></span> Create Account
         </a>
     </div>
-    <!-- <?php if(null !== session('success')) : ?>
+    <?php if(null !== session('success')) : ?>
         <div class="alert alert-success success-message"><?= session('success') ?></div>
-    <?php endif; ?> -->
+    <?php endif; ?>
     <div class="card-box mb-30">
         <div class="pb-20 p-4">
             <table class="data-table table stripe hover nowrap">
@@ -66,7 +61,7 @@
                                         <input type="hidden" name="delete_id" value="<?= $user['id'] ?>">
                                         <button type="submit" class="dropdown-item ">
                                             <i class="dw dw-delete-3"></i> Delete
-                                        </button type="submit">
+                                        </button>
                                     </form>
                                     <?php endif; ?>
                                 </div>
@@ -78,6 +73,8 @@
             </table>
         </div>
     </div> 
+
+<?php include(base_path('views/backend/layout/footer.view.php')) ?>
 
 <script>
 
@@ -104,5 +101,3 @@
         })
     })
 </script>
-
-<?php include(base_path('views/backend/layout/footer.view.php')) ?>

@@ -2,16 +2,15 @@
 
 session_start();
 
-//require "../vendor/autoload.php";
+require "../vendor/autoload.php";
 
 const BASE_PATH = __DIR__.'/../';
 
-
 require BASE_PATH . 'Core/function.php';
 
-spl_autoload_register(function ($class) {
-    require base_path(str_replace('\\', '/', $class).'.php');
-});
+// spl_autoload_register(function ($class) {
+//     require base_path(str_replace('\\', '/', $class).'.php');
+// });
 
 require base_path('bootstrap.php');
 

@@ -28,7 +28,7 @@ if(false !== $user && $user['is_admin'] == 1) {
 
 if(false !== $user && $user['is_admin'] == 0) {
     $_SESSION['auth_user'] = $user;
-    redirectTo('shops');
+    redirectTo('admin/shops');
 }
 
     setError('These credential does not match our  records');

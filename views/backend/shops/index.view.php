@@ -13,7 +13,7 @@
                                     <span class="font-26 font_b">Shops</span>
                                     <?php if(session('auth_user')['is_admin'] == '1') : ?> 
                                         <div class="t-right dpy-i">
-                                            <a href="/shops/create" class="btn btn-primary btn-lg">
+                                            <a href="/admin/shops/create" class="btn btn-primary btn-lg">
                                                 <span class="ri-add-line"></span> Create Shop
                                             </a>
                                         </div>
@@ -66,11 +66,11 @@
                                                         <a class="dropdown-item view" href="#"
                                                             ><i class="dw dw-eye"></i> View</a
                                                         >
-                                                        <a class="dropdown-item" href="/shops/edit?id=<?= $shop['id'] ?>"
+                                                        <a class="dropdown-item" href="/admin/shops/edit?id=<?= $shop['id'] ?>"
                                                             ><i class="dw dw-edit2"></i> Edit</a
                                                         >
                                                         <?php if(getAuthUser()['id'] !== $shop['owner_id']) : ?>
-                                                        <form action="/shops/delete" method="POST" class="delete_form">
+                                                        <form action="/admin/shops/delete" method="POST" class="delete_form">
                                                             <input type="hidden" name="_method" value="DELETE">
                                                             <input type="hidden" name="delete_id" value="<?= $shop['id'] ?>">
                                                             <button type="submit" class="dropdown-item ">
@@ -91,13 +91,14 @@
             </div>
         </div>
     </div>
+                     
+<?php include(base_path('views/backend/layout/footer.view.php')) ?>
 
-                                
 <script>
     $('.delete_form').on('click', function(e) {
     e.preventDefault();
     Swal.fire({
-        title: 'Are you sure want to delete this account?',
+        title: 'Are you sure want to delete this shop?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -117,4 +118,3 @@
         })
     })
 </script>
-<?php include(base_path('views/backend/layout/footer.view.php')) ?>

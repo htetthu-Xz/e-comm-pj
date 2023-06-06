@@ -9,9 +9,9 @@ if(checkAuthUser()) {
 
     $shops = $db->query("SELECT id,name FROM shops")->get();
 
-
+    $categories = $db->query('SELECT id,name FROM categories')->get();
     
-    view('backend/products/create.view.php', ['shops' => $shops]);
+    view('backend/products/create.view.php', ['shops' => $shops, 'categories' => $categories]);
 
 } else {
     $router = new Core\Router;

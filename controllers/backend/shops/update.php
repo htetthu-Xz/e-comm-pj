@@ -36,7 +36,7 @@ if(empty($errors)) {
                 ]);
 
     with('success', 'Shop successfully updated.');
-    redirectTo('shops');
+    redirectTo('admin/shops');
 } else {
     view('backend/shops/create.view.php',['errors' => $errors]);
 }

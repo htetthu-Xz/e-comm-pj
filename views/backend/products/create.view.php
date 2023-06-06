@@ -1,5 +1,11 @@
 <?php include(base_path('views/backend/layout/header.view.php')) ?>
 
+<div class="t-right">
+    <a href="<?= previousPage() ?>" class="btn btn-dark btn-sm mb-3">
+        <span class="ri-arrow-drop-left-line"></span> Back
+    </a>
+</div>
+
 <div class="card rounded-lg shadow-sm">
     <div class="card-header">
         Add Products
@@ -14,7 +20,7 @@
                  </ul>
             </div>
         <?php endif; ?>
-        <form method="POST" action="/products/create" enctype="multipart/form-data">
+        <form method="POST" action="/admin/products/create" enctype="multipart/form-data">
             <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Product Name</label>
                 <div class="col-sm-12 col-md-10">
@@ -27,6 +33,16 @@
                     <select class="custom-select col-12" name="shop_id">
                         <?php foreach($shops as $shop) : ?>
                             <option value="<?= $shop['id'] ?>"><?= $shop['name'] ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-12 col-md-2 col-form-label">Select Category</label>
+                <div class="col-sm-12 col-md-10">
+                    <select class="custom-select col-12" name="category_id">
+                        <?php foreach($categories as $category) : ?>
+                            <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>

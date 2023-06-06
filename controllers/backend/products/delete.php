@@ -14,7 +14,7 @@ if((null !== session('auth_user') && $userId['owner_id'] == session('auth_user')
     $db->query('DELETE FROM products WHERE id = :id',['id' => $product['id']]);
 
     with('success', 'Product successfully Deleted.');
-    redirectTo('products');
+    redirectTo('admin/products');
 
 } else {
     $router = new Core\Router;
