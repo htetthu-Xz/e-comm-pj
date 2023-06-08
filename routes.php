@@ -84,6 +84,11 @@ $router->post('/admin/shipping/store', 'controllers/backend/shipping/store.php')
 $router->delete('/admin/shipping/delete', 'controllers/backend/shipping/delete.php');
 $router->patch('/admin/shipping/edit', 'controllers/backend/shipping/edit.php');
 
+#contact
+$router->get('/admin/customer/message', 'controllers/backend/customer_message/index.php');
+$router->get('/admin/customer/message-info', 'controllers/backend/customer_message/info.php');
+$router->delete('/admin/customer/message-delete', 'controllers/backend/customer_message/delete.php');
+
 
 #****Site****
 
@@ -102,6 +107,7 @@ $router->get('/user/profile', 'controllers/site/profile.php');
 $router->get('/user/profile/edit', 'controllers/site/profile_edit.php');
 $router->post('/user/profile/update', 'controllers/site/profile_update.php');
 $router->get('/orders/invoice', 'controllers/site/invoice.php');
+$router->post('/contact/message', 'controllers/site/contact_message.php');
 
 #cart
 

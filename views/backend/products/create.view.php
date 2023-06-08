@@ -42,7 +42,7 @@
                 <div class="col-sm-12 col-md-10">
                     <select class="custom-select col-12" name="category_id">
                         <?php foreach($categories as $category) : ?>
-                            <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
+                            <option value="<?= $category['id'] ?>"><?= $category['name'] ?> (<?= $category['shop_name'] ?>)</option>
                         <?php endforeach; ?>
                     </select>
                 </div>

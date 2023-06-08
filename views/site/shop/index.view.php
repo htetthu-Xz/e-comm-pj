@@ -1,4 +1,10 @@
 <?php include(base_path('views/site/layout/header.view.php')) ?>
+<style>
+.name {
+    font-size: 26px;
+    padding: 5px;
+}
+</style>
 
 <section class="section-slide">
     <div class="wrap-slick1 rs2-slick1">
@@ -32,8 +38,22 @@
     </div>
 </section>
 
+<div class="container ml-4">
+    <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+        <a href="/" class="stext-109 cl8 hov-cl1 trans-04">
+            Home
+            <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+        </a>
+
+        <a href="/shop?id=<?= $shop['id'] ?>" class="stext-109 cl8 hov-cl1 trans-04">
+            <?= $shop['name'] ?>
+        </a>
+    </div>
+</div>
+
 <div class="bg0 m-t-23 p-b-140">
     <div class="container">
+    <span class="mt-5 badge badge-dark name"><?= $shop['name'] ?></span>
         <h3 class="mt-5">Description</h3>
         <div class="flex-w flex-sb-m mb-5">
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">

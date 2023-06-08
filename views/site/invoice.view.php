@@ -1,5 +1,12 @@
 <?php include(base_path('views/site/layout/header.view.php')) ?>
-
+<div class="container m-t-bl">
+    <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+        <a href="<?= previousPage() ?>" class="stext-109 cl8 hov-cl1 trans-04">
+            <i class="fa fa-angle-left m-l-9 m-r-10" aria-hidden="true"></i>  
+            back
+        </a>
+    </div>
+</div>
 
 <div class="card m-invoice invoice section-to-print">
   <div class="card-body" id="print_area">

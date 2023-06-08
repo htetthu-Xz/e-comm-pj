@@ -11,6 +11,7 @@ $product = $db->query('SELECT * FROM products WHERE id = :id', [
     'id' => $_GET['id']
 ])->find();
 
+
 $shop = $db->query('SELECT * FROM shops WHERE id = :id', [
     'id' => $product['shop_id']
 ])->find();

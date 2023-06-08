@@ -8,6 +8,11 @@
             <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
         </a>
 
+        <a href="<?= previousPage() ?>" class="stext-109 cl8 hov-cl1 trans-04">
+            previous page
+            <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+        </a>
+
         <span class="stext-109 cl4">
             Cart Details
         </span>

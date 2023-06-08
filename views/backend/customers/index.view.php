@@ -30,7 +30,7 @@
                     <div class="name-avatar d-flex align-items-center">
                         <div class="avatar mr-2 flex-shrink-0">
                             <img
-                                src="../../<?= defaultCustomerProfile($customer['profile']) ?>"
+                                src="../../<?= defaultCustomerProfile($customer) ?>"
                                 class="border-radius-100 shadow"
                                 width="40"
                                 height="40"

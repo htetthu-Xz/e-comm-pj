@@ -67,12 +67,12 @@
                         ><span class="mtext">Category</span>
                     </a>
                 </li>
-                <li>
-                    <a href="/admin/discount" class="dropdown-toggle no-arrow <?= urlIs('/admin/discount') ? 'bg-secondary' : ''; ?>">
+                <!-- <li>
+                    <a href="/admin/discount" class="dropdown-toggle no-arrow <?php //urlIs('/admin/discount') ? 'bg-secondary' : ''; ?>">
                         <span class="micon ri-price-tag-3-fill"></span
                         ><span class="mtext">Discount</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="/admin/orders" class="dropdown-toggle no-arrow <?= urlIs('/admin/orders') ? 'bg-secondary' : ''; ?>">
                         <span class="micon ri-shopping-cart-fill"></span
@@ -83,6 +83,12 @@
                     <a href="/admin/shipping" class="dropdown-toggle no-arrow <?= urlIs('/admin/shipping') ? 'bg-secondary' : ''; ?>">
                         <span class="micon ri-truck-line"></span
                         ><span class="mtext">Shipping</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/customer/message" class="dropdown-toggle no-arrow <?= urlIs('/admin/customer/message') ? 'bg-secondary' : ''; ?>">
+                        <span class="micon ri-mail-send-line"></span
+                        ><span class="mtext">Customer Message</span>
                     </a>
                 </li>
         </div>
