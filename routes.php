@@ -82,7 +82,8 @@ $router->get('/admin/shipping/district', 'controllers/backend/shipping/district.
 $router->get('/admin/shipping/township', 'controllers/backend/shipping/township.php');
 $router->post('/admin/shipping/store', 'controllers/backend/shipping/store.php');
 $router->delete('/admin/shipping/delete', 'controllers/backend/shipping/delete.php');
-$router->patch('/admin/shipping/edit', 'controllers/backend/shipping/edit.php');
+$router->get('/admin/shipping/edit', 'controllers/backend/shipping/edit.php');
+$router->patch('/admin/shipping/update', 'controllers/backend/shipping/update.php');
 
 #contact
 $router->get('/admin/customer/message', 'controllers/backend/customer_message/index.php');

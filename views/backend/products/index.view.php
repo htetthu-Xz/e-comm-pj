@@ -37,7 +37,7 @@
                             />
                         </div>
                         <div class="txt">
-                            <div class="weight-600"><?= $product['name'] ?></div>
+                            <div class="weight-600"><?= substr($product['name'], 0 , 15) ?>...</div>
                         </div>
                     </div>
                 </td>
