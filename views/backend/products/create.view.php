@@ -60,12 +60,6 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-12 col-md-2 col-form-label">Expiry Date</label>
-                <div class="col-sm-12 col-md-10">
-                    <input class="form-control" name="expiry_date" type="date">
-                </div>
-            </div>
-            <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Product Description</label>
                 <div class="col-sm-12 col-md-10">
                     <textarea class="form-control"  name="description"></textarea>
