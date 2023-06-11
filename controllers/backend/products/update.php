@@ -55,7 +55,7 @@ if(empty($errors)) {
             [$image1 ,$image2 , $image3] = $images;    
         }
     
-    $db->query('UPDATE products SET name = :name, description = :description, category_id = :category_id, price = :price, quantity = :quantity, image1 = :image1, image2 = :image2, image3 = :image3, updated_at = :updated_at, shop_id = :shop_id, expiry_date = :expiry_date WHERE id = :id ',[
+    $db->query('UPDATE products SET name = :name, description = :description, category_id = :category_id, price = :price, quantity = :quantity, image1 = :image1, image2 = :image2, image3 = :image3, updated_at = :updated_at, shop_id = :shop_id WHERE id = :id ',[
                     'id' => $_POST['p_id'],
                     'name' => $_POST['name'],
                     'description' => $_POST['description'],
@@ -67,12 +67,19 @@ if(empty($errors)) {
                     'image3' => $image3? $image3 : $img3,
                     'updated_at' => Carbon::now()->format('Y-m-d-H:i:s'),
                     'shop_id' => intval($_POST['shop_id']),
-                    'expiry_date' => Carbon::parse($_POST['expiry_date'])->format('Y-m-d') ?? null
                 ]);
 
     with('success', 'Products successfully updated.');
     redirectTo('admin/products');
 } else {
+    $categories = $db->query('SELECT categories.id as id, categories.name as name, shops.name as shop_name 
+                                FROM categories LEFT JOIN shops ON shops.id = categories.shop_id ')->get();
+
+    $product = $db->query("SELECT * FROM products WHERE id = :id",[
+    'id' => $_POST['p_id']
+    ])->findOrFail();
+
     $shops = $db->query("SELECT id,name FROM shops")->get();
-    view('backend/products/edit.view.php',['errors' => $errors,'shops' => $shops]);
+
+    view('backend/products/edit.view.php',['errors' => $errors,'shops' => $shops, 'product' => $product, 'categories' => $categories]);
 }

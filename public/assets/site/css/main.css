@@ -3042,6 +3042,11 @@ input.num-product::-webkit-inner-spin-button {
   padding-right: 11%;
 }
 
+.how-pos11 {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
 @media (max-width: 991px) {
   .how-pos2 {
     padding-left: 8%;
@@ -3420,6 +3425,7 @@ input.num-product::-webkit-inner-spin-button {
   .p-0-md {padding: 0;}
   .p-lr-0-md {padding-left: 0; padding-right: 0;}
   .p-lr-15-md {padding-left: 15px; padding-right: 15px;}
+  .p-lr-16-md {padding-left: 30px; padding-right: 30px;}
   .p-l-0-md {padding-left: 0;}
   .p-r-0-md{padding-right: 0;}
   .p-l-15-md {padding-left: 15px;}

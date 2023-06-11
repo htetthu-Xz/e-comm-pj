@@ -128,10 +128,10 @@
 					<div class="tab-content p-t-43">
 						<!-- - -->
 						<div class="tab-pane fade show active" id="description" role="tabpanel">
-							<div class="how-pos2 p-lr-15-md">
-								<p class="stext-102 cl6">
+							<div class="how-pos2 p-lr-15-md" style="line-height: 30px;">
+								<div class="stext-102 cl6">
 									<?= $product['description'] ?>
-								</p>
+								</div>
 							</div>
 						</div>
 

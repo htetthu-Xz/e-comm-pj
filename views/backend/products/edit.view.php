@@ -49,9 +49,9 @@
                     <select class="custom-select col-12" name="category_id">
                         <?php foreach($categories as $category) : ?>
                             <?php if($category['id'] == $product['category_id']) : ?>
-                                <option value="<?= $category['id'] ?>" selected><?= $category['name'] ?></option>
+                                <option value="<?= $category['id'] ?>" selected><?= $category['name'] ?>(<?= $category['shop_name'] ?>)</option>
                             <?php else : ?>
-                                <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
+                                <option value="<?= $category['id'] ?>"><?= $category['name'] ?><?= $category['shop_name'] ?>)</option>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </select>
