@@ -23,7 +23,7 @@
         <form method="POST" action="/admin/customers/update" enctype="multipart/form-data"> 
             <input type="hidden" name="_method" value="PATCH">
             <input type="hidden" name="customer_id" value="<?= $customer['id'] ?>">
-            <div class="form-group row">
+            <!-- <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Name</label>
                 <div class="col-sm-12 col-md-10">
                     <input class="form-control" name="name" type="text" value="<?= $customer['name'] ?>" required>
@@ -34,8 +34,8 @@
                 <div class="col-sm-12 col-md-10">
                     <input class="form-control" name="email" type="email" value="<?= $customer['email'] ?>" required>
                 </div>
-            </div>
-            <div class="form-group row">
+            </div> -->
+            <!-- <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Password</label>
                 <div class="col-sm-12 col-md-10">
                     <input class="form-control" name="password"  type="password" required>
@@ -46,8 +46,8 @@
                 <div class="col-sm-12 col-md-10">
                     <input class="form-control" name="confirm_password"  type="password" required>
                 </div>
-            </div>
-            <div class="form-group row">
+            </div> -->
+            <!-- <div class="form-group row">
                 <label class="col-sm-12 col-md-2 col-form-label">Phone</label>
                 <div class="col-sm-12 col-md-10">
                     <input class="form-control" name="phone" value="<?= $customer['phone'] ?>" type="text">
@@ -58,7 +58,7 @@
                 <div class="col-sm-12 col-md-10">
                     <textarea class="form-control" value="<?= $customer['address'] ?>" name="address"></textarea>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group row">
                 <label class="col-sm-12 col-md-2 ">Status</label>
                 <div class="col-sm-12 col-md-10">

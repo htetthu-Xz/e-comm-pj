@@ -3,11 +3,11 @@
     <div class="alert alert-success success-message"><?= session('success') ?></div>
 <?php endif; ?>
 <div class="card-box pb-10 p-3">
-    <div class="t-right">
+    <!-- <div class="t-right">
         <a href="/admin/customers/create" class="btn btn-primary btn-lg">
             <span class="ri-add-line"></span> Add Customers
         </a>
-    </div>
+    </div> -->
     <div class="product-t pd-20 mb-0">Customers</div>
 
     <table class="data-table table nowrap">
