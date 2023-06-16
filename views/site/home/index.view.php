@@ -5,7 +5,7 @@
 		<div class="wrap-slick1 rs2-slick1">
 			<div class="slick1">
 
-				<div class="item-slick1 bg-overlay1" style="background-image: url(<?= $home_sliders['1']['image']  ?>);  background-repeat: no-repeat;background-attachment: fixed;background-position: center;" data-thumb="" data-caption="Men’s Wear">
+				<div class="item-slick1 bg-overlay1" style="background-image: url(<?=  $home_sliders['0']['image'] ?>);  background-repeat: no-repeat;background-attachment: fixed;background-position: center;" data-thumb="" data-caption="Men’s Wear">
 					<div class="container h-full">
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
@@ -29,7 +29,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 bg-overlay1" style="background-image: url(<?= $home_sliders['2']['image']  ?>);  background-repeat: no-repeat;background-attachment: fixed;background-position: center;" data-thumb="" data-caption="Men’s Wear">
+				<div class="item-slick1 bg-overlay1" style="background-image: url(<?= $home_sliders['1']['image']  ?>);  background-repeat: no-repeat;background-attachment: fixed;background-position: center;" data-thumb="" data-caption="Men’s Wear">
 					<div class="container h-full">
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
@@ -53,18 +53,18 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 bg-overlay1" style="background-image: url(<?= $home_sliders['0']['image']  ?>);  background-repeat: no-repeat;background-attachment: fixed;background-position: center; " data-thumb="" data-caption="Women’s Wear">
+				<div class="item-slick1 bg-overlay1" style="background-image: url(<?= $home_sliders['2']['image']  ?>);  background-repeat: no-repeat;background-attachment: fixed;background-position: center; " data-thumb="" data-caption="Women’s Wear">
 					<div class="container h-full">
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
 								<span class="ltext-202 txt-center cl0 respon2">
-									Would you like to eat our special pizza !
+									Fear of God series !
 								</span>
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
 								<h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
-									New Taste 
+									Essential 
 								</h2>
 							</div>
 								

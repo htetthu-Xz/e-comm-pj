@@ -4,6 +4,24 @@
 use Core\App;
 use Core\Database;
 
+// dd($_POST);
+
+if($_POST['payment'] === 'Select a payment...'){
+    with('warning', 'Please select a payment');
+    redirectTo('cart_details');
+} else if($_POST['payment'] === 'card' && $_POST['card_number'] === '' ) {
+    with('warning', 'Please insert card number');
+    redirectTo('cart_details');
+}
+
+if($_POST['payment'] === 'card') {
+    $_SESSION['payment'] = $_POST['card_number'];
+} else {
+    $_SESSION['payment'] = 'cash';
+}
+
+// dd($payment);
+
 if(false === checkAuthCus()) {
     redirectTo('login');
 }
@@ -35,4 +53,4 @@ foreach(session('cart') as $key => $cart) {
 
 // dd($_SESSION);
 // dd('hh');
-view('site/cart/checkout.view.php', compact('carts', 'shipping'));
+view('site/cart/checkout.view.php', compact('carts', 'shipping', 'payment'));

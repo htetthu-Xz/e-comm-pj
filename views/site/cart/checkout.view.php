@@ -62,6 +62,14 @@
                             <span class="p-3 mt-4"><?= $shipping['state_name'],',','&nbsp;', $shipping['dis_name'],',','&nbsp;', $shipping['town_name'],'&nbsp;'?>  -</span>
                             <span class="p-3 mt-4"><?= $shipping['fee'] ?> MMK</span>
                         </div>
+                        <div class="d-flex">
+                            <span class="p-3 mt-4">Payment - </span>
+                            <?php if(session('payment') === 'cash') : ?>
+                                <span class="p-3 mt-4"> Cash on Delivery </span>
+                            <?php else : ?>
+                                <span class="p-3 mt-4"> Card </span>
+                            <?php endif; ?>
+                        </div>
                 </div>
                 <a class="order-button" href="/order_now">
                     Order Now

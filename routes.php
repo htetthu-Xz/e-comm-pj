@@ -117,7 +117,7 @@ $router->get('/cart_details', 'controllers/site/cart/cart_details.php');
 $router->get('/card_details/remove_card_item', 'controllers/site/cart/remove_cart_item.php');
 $router->get('/card_details/empty_cart', 'controllers/site/cart/empty_cart.php');
 $router->post('/card_details/update', 'controllers/site/cart/update.php');
-$router->get('/cart_checkout', 'controllers/site/cart/checkout.php');
+$router->post('/cart_checkout', 'controllers/site/cart/checkout.php');
 $router->get('/order_now', 'controllers/site/cart/order_now.php');
 
 

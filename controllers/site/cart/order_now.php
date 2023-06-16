@@ -36,23 +36,31 @@ foreach ($carts as $cart) {
     }
 }
 
+if(session('payment') === 'cash') {
+    $payment = 0;
+} else {
+    $payment = 1;
+}
+
+// dd($payment);
 
 
-
-$db->query('INSERT INTO orders(order_number, shop_id, customer_id, amount, order_detail, created_at, updated_at) 
-                VALUES (:order_number, :shop_id, :customer_id, :amount, :order_detail, :created_at, :updated_at) ',[
+$db->query('INSERT INTO orders(order_number, shop_id, customer_id, amount, order_detail, payment, created_at, updated_at) 
+                VALUES (:order_number, :shop_id, :customer_id, :amount, :order_detail, :payment, :created_at, :updated_at) ',[
                     'order_number' => strtoupper(guidv4()),
                     'shop_id' => $carts[0]['shop_id'],
                     'customer_id' => getAuthCus()['id'],
                     'amount' => intval(getSubTotal($carts)) + intval($delivery_fee['fee']),
                     // 'delivery_fee' => ,
                     'order_detail' => json_encode($order_details),
+                    'payment' => $payment,
                     'created_at' => date('Y-m-d H-i-s'),
                     'updated_at' => date('Y-m-d H-i-s')
                 ]);
 
 $_SESSION['order_confirm'] = true;
 unset($_SESSION['cart']);
+unset($_SESSION['payment']);
 redirectTo();
 
 

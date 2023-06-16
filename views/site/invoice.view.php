@@ -50,8 +50,15 @@
               <li class="text-muted"><i class="ri-checkbox-blank-circle-fill" style="color:#84B0CA ;"></i> <span
                   class="me-1 fw-bold">Status: </span><span class="badge bg-success text-black fw-bold">
                   Paid</span></li>
-              <li class="text-muted mt-3 ml-5" id="qr">
-
+              <li class="text-muted">
+                <i class="ri-checkbox-blank-circle-fill" style="color:#84B0CA ;"></i> 
+                <span class="me-1 fw-bold">Payment: </span>
+                <?php if($order['payment'] == 1) : ?>
+                  <span class="badge bg-success text-black fw-bold">Card</span>
+                <?php else : ?>
+                  <span class="badge bg-success text-black fw-bold">Cash on delivery</span>
+                <?php endif; ?>
+                
               </li>
             </ul>
           </div>

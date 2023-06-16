@@ -79,6 +79,18 @@
                 <td><?= $order['total'] ?> MMK</td>
             </tr>
             <tr>
+                <td>Payment</td>
+                <td>
+                    <?php 
+                        if($order['payment'] == 1) {
+                            echo "Card";
+                        } else {
+                            echo "Cash On delivery";
+                        }
+                    ?> 
+                </td>
+            </tr>
+            <tr>
                 <td>Order Confirm Date</td>
                 <td><?= Carbon\Carbon::parse($order['created_at'])->format('d-M-Y, H:i:s A') ?></td>
             </tr>
