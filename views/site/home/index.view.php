@@ -131,7 +131,7 @@
         </div>
     </div> -->
 
-    <div class="container py-5 h-auto" id="shop">
+    <div class="container py-5 h-auto mt-5-j" id="shop">
         <h3 class="block1-name ltext-102 mb-4">#Shops</h3>
         <div class="row">
             <!-- <div class="col-sm-12 col-lg-4"> -->

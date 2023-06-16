@@ -14,7 +14,7 @@
             <tr>
                 <th>#</th>
                 <th class="table-plus">Name</th>
-                <th>Quantity</th>
+                <th>Availability</th>
                 <th>Shop</th>
                 <th>Category</th>
                 <th>price</th>

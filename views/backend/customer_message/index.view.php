@@ -43,7 +43,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card-box">
                 <div class="card-body bg-msg text-white mailbox-widget pb-0">
                     <h2 class="text-white pb-3">Customer Message</h2>
                     <ul class="nav nav-tabs custom-tab border-bottom-0 mt-4" id="myTab" role="tablist">
