@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="/<?= defaultProfile(session('customer')) ?>" alt="" class="pf-imgg"/>
+                    <img src="/<?= defaultCustomerProfile(session('customer')) ?>" alt="" class="pf-imgg"/>
                 </div>
             </div>
             <div class="col-md-6">

@@ -14,13 +14,6 @@ if(!Validator::string(($_POST['name']))) {
     array_push($errors, "Products name is required!");
 }
 
-if(!Validator::string(($_POST['quantity']),1,1000)) {
-    array_push($errors, "Products quantity is required!");
-}
-
-if(!is_numeric($_POST['quantity'])){
-    array_push($errors, "Quantity field not allow characters!");
-}
 
 if(!Validator::string(($_POST['price']),1,1000)) {
     array_push($errors, "Products price is required!");
@@ -55,13 +48,13 @@ if(empty($errors)) {
             [$image1 ,$image2 , $image3] = $images;    
         }
     
-    $db->query('UPDATE products SET name = :name, description = :description, category_id = :category_id, price = :price, quantity = :quantity, image1 = :image1, image2 = :image2, image3 = :image3, updated_at = :updated_at, shop_id = :shop_id WHERE id = :id ',[
+    $db->query('UPDATE products SET name = :name, description = :description, category_id = :category_id, price = :price, is_stock = :is_stock, image1 = :image1, image2 = :image2, image3 = :image3, updated_at = :updated_at, shop_id = :shop_id WHERE id = :id ',[
                     'id' => $_POST['p_id'],
                     'name' => $_POST['name'],
                     'description' => $_POST['description'],
                     'price' => intval($_POST['price']),
                     'category_id' => intval($_POST['category_id']),
-                    'quantity' => intval($_POST['quantity']),
+                    'is_stock' => $_POST['is_stock'],
                     'image1' => $image1? $image1 : $img1,
                     'image2' => $image2? $image2 : $img2,
                     'image3' => $image3? $image3 : $img3,

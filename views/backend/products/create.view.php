@@ -48,9 +48,13 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-12 col-md-2 col-form-label">Quantity</label>
+                <label class="col-sm-12 col-md-2 col-form-label">Availability</label>
                 <div class="col-sm-12 col-md-10">
-                    <input class="form-control" name="quantity" type="number" required>
+                    <select class="custom-select col-12" name="is_stock">
+                            <option>Choose availability...</option>
+                            <option value="1">In Stock</option>
+                            <option value="0">Out of Stock</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">

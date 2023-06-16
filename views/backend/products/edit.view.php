@@ -58,9 +58,20 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-12 col-md-2 col-form-label">Quantity</label>
+                <label class="col-sm-12 col-md-2 col-form-label">Availability</label>
                 <div class="col-sm-12 col-md-10">
-                    <input class="form-control" name="quantity" type="number" value="<?= $product['quantity'] ?>" required>
+                    <select class="custom-select col-12" name="is_stock">
+                        <?php if($product['is_stock'] == 1) : ?>
+                            <option value="1" selected>In Stock</option>
+                        <?php else : ?>
+                            <option value="1">In Stock</option>
+                        <?php endif; ?>
+                        <?php if($product['is_stock'] == 0) : ?>
+                            <option value="0" selected>Out of Stock</option>
+                        <?php else : ?>
+                            <option value="0">Out of Stock</option>
+                        <?php endif; ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">

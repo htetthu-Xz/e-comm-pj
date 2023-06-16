@@ -41,7 +41,16 @@
                         </div>
                     </div>
                 </td>
-                <td><?= $product['quantity'] ?></td>
+                <td>
+                    <?php 
+                        if($product['is_stock'] == 1) {
+                            echo "In Stock";
+                        } else {
+                            echo "Out of Stock";
+                        }
+                    
+                    ?>
+                </td>
                 <td><?= getShop($product['shop_id'],$shops) ?></td>
                 <td><?= getCategory($product['category_id'],$categories) ?></td>
                 <td>

@@ -71,47 +71,48 @@
                             <?= $product['name'] ?>
 						</h4>
 
-						<span class="mtext-106 cl2">
+						<span class="mtext-106 cl2 my-4">
                             <?= number_format($product['price']) ?> MMK
 						</span>
 						<br>
-                        <p class="badge badge-pill badge-info my-2">
+                        <p class="badge badge-pill badge-info my-4">
 							<?= $category['name'] ?> 
                         </p>
 
 						<p class="stext-102 cl3">
-                            <?php if($product['quantity'] > 1) : ?>
+                            <?php if($product['is_stock'] == 1) : ?>
                                 Availability <span class="mx-2">:</span> In-stock
                             <?php else : ?>
                                 Availability <span class="mx-2">:</span> Out of Stock
                             <?php endif; ?>
 						</p>
 						
-						<!--  -->
-						<div class="p-t-33">
-							<div class="flex-w p-b-10">
-								<form action="/store" method="POST">
-									<input type="hidden" name="product_id" value="<?= $product['id'] ?>">
-									<div class="size-204 flex-w flex-m respon6-next">
-										<div class="wrap-num-product flex-w m-r-20 m-tb-10">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
+						<?php if($product['is_stock'] == 1) : ?>
+							<div class="p-t-33">
+								<div class="flex-w p-b-10">
+									<form action="/store" method="POST">
+										<input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+										<div class="size-204 flex-w flex-m respon6-next">
+											<div class="wrap-num-product flex-w m-r-20 m-tb-10">
+												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+													<i class="fs-16 zmdi zmdi-minus"></i>
+												</div>
+
+												<input class="mtext-104 cl3 txt-center num-product" id="qty" type="text" name="product_quantity" value="1">
+
+												<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+													<i class="fs-16 zmdi zmdi-plus"></i>
+												</div>
 											</div>
 
-											<input class="mtext-104 cl3 txt-center num-product" id="qty" type="text" name="product_quantity" value="1">
-
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
+											<button type="submit" class="flex-c-m mt-2 stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+												Add to cart
+											</button>
 										</div>
-
-										<button type="submit" class="flex-c-m mt-2 stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-											Add to cart
-										</button>
-									</div>
-								</form>
-							</div>	
-						</div>
+									</form>
+								</div>	
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

@@ -13,13 +13,6 @@ if(!Validator::string(($_POST['name']))) {
     array_push($errors, "Products name is required!");
 }
 
-if(!Validator::string(($_POST['quantity']),1,1000)) {
-    array_push($errors, "Products quantity is required!");
-}
-
-if(!is_numeric($_POST['quantity'])){
-    array_push($errors, "Quantity field not allow characters!");
-}
 
 if(!Validator::string(($_POST['price']),1,1000)) {
     array_push($errors, "Products price is required!");
@@ -43,12 +36,12 @@ if(empty($errors)) {
     $name2 = upload($_FILES['image2'], 'product_images/');
     $name3 = upload($_FILES['image3'], 'product_images/');
 
-    $db->query('INSERT INTO products (name, description, price, quantity, category_id, image1, image2, image3, shop_id, created_at, updated_at) 
-                VALUES (:name, :description, :price, :quantity, :category_id, :image1, :image2, :image3, :shop_id, :created_at, :updated_at) ',[
+    $db->query('INSERT INTO products (name, description, price, is_stock, category_id, image1, image2, image3, shop_id, created_at, updated_at) 
+                VALUES (:name, :description, :price, :is_stock, :category_id, :image1, :image2, :image3, :shop_id, :created_at, :updated_at) ',[
                     'name' => $_POST['name'],
                     'description' => $_POST['description'],
                     'price' => intval($_POST['price']),
-                    'quantity' => intval($_POST['quantity']),
+                    'is_stock' => $_POST['is_stock'],
                     'category_id' => intval($_POST['category_id']),
                     'image1' => $name1 ?? '',
                     'image2' => $name2 ?? '',
@@ -62,6 +55,6 @@ if(empty($errors)) {
     redirectTo('admin/products');
 } else {
     $shops = $db->query("SELECT id,name FROM shops")->get();
-    $categories = $db->query("SELECT id,name FROM categories")->get();
+    $categories = $db->query('SELECT categories.id as id, categories.name as name, shops.name as shop_name FROM categories LEFT JOIN shops ON shops.id = categories.shop_id')->get();
     view('backend/products/create.view.php',['errors' => $errors,'shops' => $shops, 'categories' => $categories]);
 }
