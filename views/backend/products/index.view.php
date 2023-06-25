@@ -102,7 +102,7 @@
     $('.delete_form').on('click', function(e) {
     e.preventDefault();
     Swal.fire({
-        title: 'Are you sure want to delete this account?',
+        title: 'Are you sure want to delete this product?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
