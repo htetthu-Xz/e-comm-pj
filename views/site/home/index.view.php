@@ -167,7 +167,7 @@
 
 
 
-	<?php if($_SESSION['order_confirm'] === true) : ?>
+	<?php if(isset($_SESSION['order_confirm']) === true) : ?>
 		<script>
 
 			swal('You Ordered successfully!')

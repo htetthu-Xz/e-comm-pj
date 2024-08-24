@@ -201,7 +201,7 @@
 <!--===============================================================================================-->
 	<script src="../../assets/site/vendor/sweetalert/sweetalert.min.js"></script>
 
-	<?php if($_SESSION['order_confirm'] === true) : ?>
+	<?php if(isset($_SESSION['order_confirm']) === true) : ?>
 		<script>
 
 			swal('Thanks You !','Your Ordered successfully',"success");

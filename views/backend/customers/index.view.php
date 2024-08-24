@@ -19,7 +19,9 @@
                 <th>phone</th>
                 <th>Address</th>
                 <th>Status</th>
-                <th class="datatable-nosort">Actions</th>
+                <?php if(session('auth_user')['is_admin'] == 1) :?>
+                    <th class="datatable-nosort">Actions</th>
+                <?php endif; ?>   
             </tr>
         </thead>
         <tbody>
@@ -56,20 +58,21 @@
                         </span>
                     <?php endif; ?>
                 </td>
-                <td>
-                    <div class="product-action">
-                        <div class="dropdown">
-                            <a
-                                class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-                                href=""
-                                role="button"
-                                data-toggle="dropdown"
-                            >
-                                <span class="icon-copy ti-angle-down"></span> Option
-                            </a>
-                            <div
-                                class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-                            >
+                <?php if(session('auth_user')['is_admin'] == 1) :?>
+                    <td>
+                        <div class="product-action">
+                            <div class="dropdown">
+                                <a
+                                    class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                                    href=""
+                                    role="button"
+                                    data-toggle="dropdown"
+                                >
+                                    <span class="icon-copy ti-angle-down"></span> Option
+                                </a>
+                                <div
+                                    class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+                                >
                                 <a class="dropdown-item" href="/admin/customers/edit?id=<?= $customer['id'] ?>"
                                     ><i class="dw dw-edit2"></i> Edit</a
                                 >
@@ -83,7 +86,8 @@
                             </div>
                         </div>
                     </div>
-                </td>
+                </td> 
+                <?php endif; ?>
             </tr>
             <?php endforeach; ?>
         </tbody>

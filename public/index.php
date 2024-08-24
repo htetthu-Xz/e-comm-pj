@@ -2,6 +2,8 @@
 
 session_start();
 
+dd('herr');
+
 require "../vendor/autoload.php";
 
 const BASE_PATH = __DIR__.'/../';
@@ -19,8 +21,7 @@ $router = new Core\Router;
 $routes = require base_path('routes.php');
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-
-
+    
 $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 $router->route($uri, $method);

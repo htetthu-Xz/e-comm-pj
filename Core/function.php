@@ -73,7 +73,11 @@ function with($key, $message) {
 }
 
 function session($key) {
-    return $_SESSION[$key];
+    if(isset($_SESSION[$key])) {
+        return $_SESSION[$key];
+    } else {
+        return null;
+    }
 }
 
 function checkAuthUser()
@@ -201,13 +205,15 @@ function getImagesFromMultiSelect($files) {
 }
 
 function getCartProductQuantity() {
-    $quantities = array_column($_SESSION['cart'], 'quantity');
-    $total = array_sum($quantities);
-
-    if($total != 0 ) {
-        return $total;
-    } else {
-        return 0;
+    if(isset($_SESSION['cart'])) {
+        $quantities = array_column($_SESSION['cart'], 'quantity');
+        $total = array_sum($quantities);
+    
+        if($total != 0 ) {
+            return $total;
+        } else {
+            return 0;
+        }
     }
 }
 

@@ -22,21 +22,23 @@
     <div class="menu-block customscroll">
         <div class="sidebar-menu">
             <ul id="accordion-menu">
-                <li>
-                    <a href="/admin" class="dropdown-toggle no-arrow <?= urlIs('/admin') ? 'bg-secondary' : ''; ?>">
-                        <span class="micon bi bi-house"></span
-                        ><span class="mtext">Dashboard</span>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon ri-account-box-line"></span
-                        ><span class="mtext">Accounts</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="/admin/accounts" class="<?= urlIs('/admin/accounts') ? 'bg-secondary' : ''; ?>">Accounts Management</a></li>
-                    </ul>
-                </li>
+                <?php if(session('auth_user')['is_admin'] == 1) :?>
+                    <li>
+                        <a href="/admin" class="dropdown-toggle no-arrow <?= urlIs('/admin') ? 'bg-secondary' : ''; ?>">
+                            <span class="micon bi bi-house"></span
+                            ><span class="mtext">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon ri-account-box-line"></span
+                            ><span class="mtext">Accounts</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="/admin/accounts" class="<?= urlIs('/admin/accounts') ? 'bg-secondary' : ''; ?>">Accounts Management</a></li>
+                        </ul>
+                    </li>
+                <?php endif; ?>
                 <li>
                     <a href="/admin/shops" class="dropdown-toggle no-arrow <?= urlIs('/admin/shops') ? 'bg-secondary' : ''; ?>">
                         <span class="micon ri-store-3-line"></span
@@ -79,12 +81,14 @@
                         ><span class="mtext">Orders</span>
                     </a>
                 </li>
-                <li>
-                    <a href="/admin/shipping" class="dropdown-toggle no-arrow <?= urlIs('/admin/shipping') ? 'bg-secondary' : ''; ?>">
-                        <span class="micon ri-truck-line"></span
-                        ><span class="mtext">Shipping</span>
-                    </a>
-                </li>
+                <?php if(session('auth_user')['is_admin'] == 1) :?>
+                    <li>
+                        <a href="/admin/shipping" class="dropdown-toggle no-arrow <?= urlIs('/admin/shipping') ? 'bg-secondary' : ''; ?>">
+                            <span class="micon ri-truck-line"></span
+                            ><span class="mtext">Shipping</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
                 <li>
                     <a href="/admin/customer/message" class="dropdown-toggle no-arrow <?= urlIs('/admin/customer/message') ? 'bg-secondary' : ''; ?>">
                         <span class="micon ri-mail-send-line"></span

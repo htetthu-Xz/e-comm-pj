@@ -42,13 +42,12 @@ class Router {
     public function route($uri, $method)
     {
         foreach($this->routes as $route){
-            if($route['uri'] == $uri && $route['method'] == $method){
-                //dd(base_path($route['controller']));
+            if($route['uri'] == $uri && $route['method'] == $method) {
                 return require base_path($route['controller']);
             }
         }
 
-        $this->abort();
+        //$this->abort();
     }
 
     public function abort($code = '404')

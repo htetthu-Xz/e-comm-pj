@@ -1,17 +1,8 @@
 <?php
 
-//namespace ကြေညာ ပြီဆိုတာနဲ့ အဲ့ class မှာ ခေါ်သုံးထားတဲ့ PDO တို့လို method တွေ က error ဖြစ်မယ် အဲ့ ကျ PDO ရေ မှာ backward slah (\)
-// or use PDO လို့ ကြေ ညာလိုက်လဲ ရပါတယ်
-
-//use PDO;
-
-
 namespace Core;
 
 use Core\Router;
-
-
-
 
 class Database 
 {
@@ -19,7 +10,7 @@ class Database
     public $statement;
     
 
-    public function __construct($config, $username = 'root', $password ='123htet2023')
+    public function __construct($config, $username = 'root', $password ='')
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
