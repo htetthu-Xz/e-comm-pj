@@ -2,7 +2,7 @@
 
 session_start();
 
-dd('herr');
+// dd('herr');
 
 require "../vendor/autoload.php";
 
