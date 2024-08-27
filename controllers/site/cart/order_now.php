@@ -45,13 +45,13 @@ if(session('payment') === 'cash') {
 // dd($payment);
 
 
-$db->query('INSERT INTO orders(order_number, shop_id, customer_id, amount, order_detail, payment, created_at, updated_at) 
-                VALUES (:order_number, :shop_id, :customer_id, :amount, :order_detail, :payment, :created_at, :updated_at) ',[
+$db->query('INSERT INTO orders(order_number, shop_id, customer_id, amount, delivery_fee, order_detail, payment, created_at, updated_at) 
+                VALUES (:order_number, :shop_id, :customer_id, :amount, :delivery_fee, :order_detail, :payment, :created_at, :updated_at) ',[
                     'order_number' => strtoupper(guidv4()),
                     'shop_id' => $carts[0]['shop_id'],
                     'customer_id' => getAuthCus()['id'],
                     'amount' => intval(getSubTotal($carts)) + intval($delivery_fee['fee']),
-                    // 'delivery_fee' => ,
+                    'delivery_fee' => $delivery_fee['fee'],
                     'order_detail' => json_encode($order_details),
                     'payment' => $payment,
                     'created_at' => date('Y-m-d H-i-s'),
