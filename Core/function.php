@@ -172,7 +172,10 @@ function getCategory($category_id, $categories) {
 
 function upload($imgFile, $path) {
     if(isset($imgFile['name']) && $imgFile['name'] != ''){
-        $profile_name = $path.\Carbon\Carbon::now()->format('U').str_replace(' ', '_', $imgFile['name']);
+        // $profile_name = $path.\Carbon\Carbon::now()->format('U').str_replace(' ', '_', $imgFile['name']);
+        $current_date = new DateTime();
+        $uid = $current_date->format("U");
+        $profile_name = $path.$uid.str_replace(' ', '_', $imgFile["name"]);
         $profile_tmp = $imgFile['tmp_name'];
         
         move_uploaded_file($profile_tmp, $profile_name);
