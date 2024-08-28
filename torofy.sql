@@ -165,6 +165,10 @@ CREATE TABLE `shippings`(
 CREATE TABLE `customer_messages`(
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `customers_id` int NOT NULL,
+  `message` TEXT NOT NULL,
+  `created_at` DATETIME,
+  `updated_at` DATETIME,
+  `is_read` BOOLEAN DEFAULT 0,
   FOREIGN KEY(`customers_id`) REFERENCES `customers` (`id`)
 );
 
