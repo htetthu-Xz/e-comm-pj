@@ -31,7 +31,7 @@
                                         <div class="contact-dire-info text-center h">
                                             <div class="contact-avatar">
                                                 <span>
-                                                    <img src="../../<?= $shop['logo'] ?>" alt="" />
+                                                    <img src="../../<?= $shop['logo'] ?>" alt="" class="w-100 h-100" />
                                                 </span>
                                             </div>
                                             <div class="contact-name">
@@ -42,8 +42,8 @@
                                                 </div>
                                             </div>
                                             <div class="contact-skill">
-                                                <span class="badge badge-pill">Open Time - <?= getDateDb($shop['open_time'], 'H:i A')  ?></span>
-                                                <span class="badge badge-pill">Close Time - <?= getDateDb($shop['close_time'], 'H:i A') ?></span>
+                                                <span class="badge badge-pill ">Open Time - <?= getDateDb($shop['open_time'], 'H:i A')  ?></span>
+                                                <span class="badge badge-pill ">Close Time - <?= getDateDb($shop['close_time'], 'H:i A') ?></span>
                                             </div>
                                             <div class="profile-sort-desc">
                                                 <?= $shop['description'] ?>
